@@ -1,35 +1,54 @@
-import { useContext, useState } from "react";
+// import du CSS et des constantes
 import styles from "./SignUpForm.module.css";
-import { AuthContext } from "../../context/AuthContext/AuthContext";
+import { ui, nav } from "../../constants/ui/fr.json";
+
+// import des dépendances
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
-import { ui, nav } from "../../constants/ui/fr.json"
+
+// import du context d'authentification
+import { AuthContext } from "../../context/AuthContext/AuthContext";
+import { MessageContext } from "../../context/MessageContext/MessageContext";
 
 const SignUpForm = () => {
+  // initialisation d'un utilisateur pour inscription
   const [signUpData, setSignUpData] = useState({
     username: "",
     email: "",
     password: "",
   });
 
+  // récupération des fonctions de authService
   const authService = useContext(AuthContext);
+
+  // fonction pour la redirection
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
+  // accès au message pour
+  const { showMessage } = useContext(MessageContext);
+
+  // fonction pour mettre à jour signUpData en temps réel
+  const handleChange = (event) => {
+    const { id, value } = event.target;
     setSignUpData({
       ...signUpData,
       [id]: value,
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await authService.register(
-      signUpData.username,
-      signUpData.email,
-      signUpData.password
-    );
-    navigate("/movies", { replace: true });
+  // fonction envoi formulaire avec blocage en l'état et redirection vers la page Films
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await authService.register(
+        signUpData.username,
+        signUpData.email,
+        signUpData.password
+      );
+      navigate("/movies", { replace: true });
+    } catch (error) {
+      showMessage("error", error.message);
+    }
   };
 
   return (

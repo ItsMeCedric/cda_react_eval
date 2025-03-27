@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { MessageContext } from "./MessageContext";
 
-// permet d'afficher les message de confirmation ou d'échec
-// type : success ou error
-// contenu : codé directement dans la fonction (pas réussi à passer par le json)
-
 export const MessageProvider = ({ children }) => {
+  // gestion de l'état du message
   const [message, setMessage] = useState({ type: "", content: "" });
 
+  // fonction pour afficher le message pendant 3 secondes
   const showMessage = (type, content) => {
     setMessage({ type, content });
-    setTimeout(() => {setMessage({ type: "", content: "" });}, 2000);
+    setTimeout(() => {
+      setMessage({ type: "", content: "" });
+    }, 3000);
   };
 
   return (

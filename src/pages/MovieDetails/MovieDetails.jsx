@@ -1,29 +1,46 @@
+// import du CSS et des constantes
 import styles from "./MovieDetails.module.css";
-import { ui, movie } from "../../constants/ui/fr.json";
+import { ui } from "../../constants/ui/fr.json";
+
+// import des dépendances
 import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router";
+
+// import des contexts
 import { MovieContext } from "../../context/MoviesContext/MoviesContext";
 import { MessageContext } from "../../context/MessageContext/MessageContext";
+import { AuthContext } from "../../context/AuthContext/AuthContext";
 import { AuthService } from "../../services/authService";
 
 const MovieDetails = () => {
-  const { showMessage } = useContext(MessageContext);
+  // récupération des fonction de movieService
   const movieService = useContext(MovieContext);
+
+  // fonction pour la redirection
   const navigate = useNavigate();
+
+  // accès au message pour "deleteMovie"
+  const { showMessage } = useContext(MessageContext);
+
+  // accès aux données enregistrée par react-router via .navigate
   const { state } = useLocation();
-  /*const movie = state.movie;
 
-  const editMovie = (e) => {
-    e.preventDefault();
-    navigate("/edit-movie", { state: { movie } });
+  // extraction du film à modifier des données du "state"
+  const movie = state.movie;
+
+  // fonction d'édition du film
+  const editMovie = (event) => {
+    event.preventDefault();
+    navigate("/edit-movie", { state: { movie } }); // renvoi le film via react-router
   };
 
-  const deleteMovie = (e) => {
-    e.preventDefault();
-    movieService.deleteMovie(id);
-    showMessage("success", "Film supprimé avec succès !");
+  // fonction de suppression du film
+  const deleteMovie = (event) => {
+    event.preventDefault();
+    movieService.deleteMovie(movie.id);
+    showMessage("success", "Film supprimé avec succès");
+    navigate("/movies");
   };
-*/
 
   return (
     <div className={styles["movie-details"]}>

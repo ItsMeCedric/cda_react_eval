@@ -1,31 +1,43 @@
-import { useContext, useState } from "react";
+// import du style et des constantes
 import styles from "./MovieForm.module.css";
-import { MovieContext } from "../../context/MoviesContext/MoviesContext";
-import { ui, movie } from "../../constants/ui/fr.json"
+import { ui, uimovie } from "../../constants/ui/fr.json";
+
+// import des dépendances
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 
+// import du context des films
+import { MovieContext } from "../../context/MoviesContext/MoviesContext";
 
 const MovieForm = () => {
-
+  // initilisation d'un film vide
   const [movieData, setMovieData] = useState({
     title: "",
     description: "",
     releaseDate: "",
     imageUrl: "",
   });
+
+  // récupération des fonctions de movieService
   const movieService = useContext(MovieContext);
+
+  // fonction pour la redirection
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // fonction envoi formulaire avec blocage en l'état et redirection
+  const handleSubmit = (element) => {
+    element.preventDefault();
     movieService
       .createMovie(movieData)
-      .then((m) => navigate("/movie-details", { state: { movie: m } }))
+      .then((currentMovie) =>
+        navigate("/movie-details", { state: { movie: currentMovie } })
+      )
       .catch((err) => console.log(err));
   };
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
+  // fonction pour mettre à jour movieData en temps réel
+  const handleChange = (element) => {
+    const { id, value } = element.target;
     setMovieData({
       ...movieData,
       [id]: value,
@@ -34,10 +46,10 @@ const MovieForm = () => {
 
   return (
     <div className={styles["movie-form"]}>
-      <h1>{movie.cat}</h1>
+      <h1>{uimovie.add}</h1>
       <form id="movie-form" onSubmit={handleSubmit}>
         <div className={styles["form-group"]}>
-          <label htmlFor="title">{movie.title}</label>
+          <label htmlFor="title">{uimovie.title}</label>
           <input
             type="text"
             id="title"
@@ -47,7 +59,7 @@ const MovieForm = () => {
           />
         </div>
         <div className={styles["form-group"]}>
-          <label htmlFor="description">{movie.description}</label>
+          <label htmlFor="description">{uimovie.description}</label>
           <textarea
             type="text"
             id="description"
@@ -58,7 +70,7 @@ const MovieForm = () => {
           />
         </div>
         <div className={styles["form-group"]}>
-          <label htmlFor="releaseDate">{movie.releaseDate}</label>
+          <label htmlFor="releaseDate">{uimovie.releaseDate}</label>
           <input
             type="date"
             id="releaseDate"
@@ -68,7 +80,7 @@ const MovieForm = () => {
           />
         </div>
         <div className={styles["form-group"]}>
-          <label htmlFor="imageUrl">{movie.imageURL}</label>
+          <label htmlFor="imageUrl">{uimovie.imageURL}</label>
           <input
             type="url"
             id="imageUrl"

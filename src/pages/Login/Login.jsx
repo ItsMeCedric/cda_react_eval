@@ -1,8 +1,10 @@
-import SignInForm from '../../components/SignInForm/SignInForm';
-import styles from './Login.module.css';
+// pas de CSS
+
+// import du composant de connexion
+import SignInForm from "../../components/SignInForm/SignInForm";
 
 const Login = () => {
-  return <SignInForm/>
+  return <SignInForm />;
 };
 
 export default Login;

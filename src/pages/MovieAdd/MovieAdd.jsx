@@ -1,4 +1,4 @@
-import styles from './MovieAdd.module.css';
+// pas de CSS
 import MovieForm from "../../components/MovieForm/MovieForm";
 
 const MovieAdd = () => {

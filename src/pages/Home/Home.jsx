@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header";
+// import styles et constantes
 import styles from "./Home.module.css";
 import { home } from "../../constants/ui/fr.json";
 

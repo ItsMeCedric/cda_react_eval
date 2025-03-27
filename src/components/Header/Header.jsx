@@ -1,5 +1,8 @@
-import Nav from "../Nav/Nav";
+// import du CSS
 import styles from "./Header.module.css";
+
+// import du composant menu
+import Nav from "../Nav/Nav";
 
 const Header = () => {
   return (

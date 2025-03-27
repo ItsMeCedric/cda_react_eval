@@ -6,12 +6,23 @@
     "edit": "Éditer",
     "email": "Email",
     "imageURL": "URL de l'image",
+    "movies": "Films",
     "nickname": "Pseudo",
     "password": "Mot de passe",
     "releaseDate": "Date de sortie",
     "register": "S'inscrire",
     "signin": "Se connecter",
     "title": "Titre"
+  },
+
+  "uimovie": {
+    "add": "Ajouter un film",
+    "edit": "Modifier ",
+    "title": "Titre",
+    "description": "Description",
+    "releaseDate": "Date de sortie",
+    "imageURL": "URL de l'image",
+    "nomovie": "Aucun film trouvé"
   },
 
   "nav": {
@@ -37,18 +48,5 @@
 
   "footer": {
     "copyright": "© 2025 Moviz. Tous droits réservés"
-  },
-
-  "movie": {
-    "cat": "Ajouter un film",
-    "title": "Titre",
-    "description": "Description",
-    "releaseDate": "Date de sortie",
-    "imageURL": "URL de l'image"
-  },
-
-  "msg": {
-    "succes": "Succès",
-    "logout": "Déconnexion réussie"
   }
 }
