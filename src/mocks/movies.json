@@ -1,0 +1,89 @@
+{
+  "cards": [
+    {
+      "title": "Iron Man",
+      "imageSrc": "src/mocks/covers/Iron_Man.jpg",
+      "date": "02/05/2008"
+    },
+    {
+      "title": "The Incredible Hulk",
+      "imageSrc": "src/mocks/covers/The_Incredible_Hulk.jpg",
+      "date": "13/06/2008"
+    },
+    {
+      "title": "Iron Man 2",
+      "imageSrc": "src/mocks/covers/Iron_Man_2.jpg",
+      "date": "07/05/2010"
+    },
+    {
+      "title": "The Avengers",
+      "imageSrc": "src/mocks/covers/The_Avengers.jpg",
+      "date": "04/05/2012"
+    },
+    {
+      "title": "Iron Man 3",
+      "imageSrc": "src/mocks/covers/Iron_Man_3.jpg",
+      "date": "03/05/2013"
+    },
+    {
+      "title": "Guardians of the Galaxy",
+      "imageSrc": "src/mocks/covers/Guardians_of_the_Galaxy.jpg",
+      "date": "01/08/2014"
+    },
+    {
+      "title": "Captain America: Civil War",
+      "imageSrc": "src/mocks/covers/Captain_America__Civil_War.jpg",
+      "date": "06/05/2016"
+    },
+    {
+      "title": "Doctor Strange",
+      "imageSrc": "src/mocks/covers/Doctor_Strange.jpg",
+      "date": "04/11/2016"
+    },
+    {
+      "title": "Guardians of the Galaxy Vol. 2",
+      "imageSrc": "src/mocks/covers/Guardians_of_the_Galaxy_Vol__2.jpg",
+      "date": "05/05/2017"
+    },
+    {
+      "title": "Spider-Man: Homecoming",
+      "imageSrc": "src/mocks/covers/Spider_Man__Homecoming.jpg",
+      "date": "07/07/2017"
+    },
+    {
+      "title": "Thor: Ragnarok",
+      "imageSrc": "src/mocks/covers/Thor__Ragnarok.jpg",
+      "date": "03/11/2017"
+    },
+    {
+      "title": "Black Panther",
+      "imageSrc": "src/mocks/covers/Black_Panther.jpg",
+      "date": "16/02/2018"
+    },
+    {
+      "title": "Avengers: Infinity War",
+      "imageSrc": "src/mocks/covers/Avengers__Infinity_War.jpg",
+      "date": "27/04/2018"
+    },
+    {
+      "title": "Captain Marvel",
+      "imageSrc": "src/mocks/covers/Captain_Marvel.jpg",
+      "date": "08/03/2019"
+    },
+    {
+      "title": "Avengers: Endgame",
+      "imageSrc": "src/mocks/covers/Avengers__Endgame.jpg",
+      "date": "26/04/2019"
+    },
+    {
+      "title": "Blade",
+      "imageSrc": "src/mocks/covers/Blade.jpg",
+      "date": "07/11/2025"
+    },
+    {
+      "title": "Frozen",
+      "imageSrc": "src/mocks/covers/Frozen.jpg",
+      "date": "27/11/2013"
+    }
+  ]
+}
