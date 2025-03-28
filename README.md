@@ -56,8 +56,10 @@ DÉBUT 13h15
 
 DÉBUT 21h00
 
-- 21h00 - Import du repo et contrôle des composants terminés
-- 21h15 - Reprise du projet avec ajout de commentaires dans tout le code existant
-- 22h05 - Modification des infos title et navicon du fichier index.html
-- 22h15 - Création et contrôle de la page MovieDetails avec les boutons éditer et supprimer
-- 23h00 - Test du site et correction de divers bugs
+- 22h00 - Import du repo et contrôle des composants terminés
+- 22h15 - Reprise du projet avec ajout de commentaires dans tout le code existant
+- 23h05 - Modification des infos title et navicon du fichier index.html
+- 23h15 - Création et contrôle de la page MovieDetails avec les boutons éditer et supprimer
+- 00h00 - Test du site et correction de divers bugs
+- 00h30 - Push final Git
+- 01h00 - Fetch + Pull + Contrôle final + Mise à jour README
